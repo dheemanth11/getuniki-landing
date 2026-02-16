@@ -3,74 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uniki | The Cognitive Seatbelt</title>
+    <title>Uniki</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #e0e0e0; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .neon-text { color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); }
-        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .grid-bg { background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 40px 40px; }
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; color: #111; }
     </style>
 </head>
-<body class="grid-bg min-h-screen flex flex-col">
+<body class="bg-white flex flex-col min-h-screen">
 
-    <nav class="w-full border-b border-white/10 bg-black/80 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="text-xl font-bold tracking-tighter">UNIKI<span class="text-green-500">.AI</span></div>
-            <div class="mono text-xs text-green-500 border border-green-500/30 px-2 py-1 rounded bg-green-900/10">
-                SYSTEM: ONLINE
-            </div>
+    <nav class="w-full border-b border-gray-100 py-6">
+        <div class="max-w-2xl mx-auto px-6 flex justify-between items-center">
+            <div class="font-semibold text-lg tracking-tight">Uniki</div>
+            <a href="mailto:dheemanth@getuniki.com" class="text-sm text-gray-500 hover:text-black transition">Contact</a>
         </div>
     </nav>
 
-    <main class="flex-grow flex items-center justify-center py-20 px-6">
-        <div class="max-w-4xl w-full text-center">
-            
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                The Cognitive <br>
-                <span class="neon-text">Seatbelt.</span>
-            </h1>
-            
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-                Bringing <strong>Level 5 Autonomy</strong> safety standards to human executive function. 
-                Preventing task drift via Ego-Centric Sensor Fusion.
-            </p>
+    <main class="flex-grow max-w-2xl mx-auto px-6 pt-24 pb-20">
+        
+        <h1 class="text-4xl font-semibold tracking-tight mb-6 text-gray-900">
+            The cognitive seatbelt for ADHD.
+        </h1>
+        
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            Existing tools manage your <strong>intent</strong> (to-do lists, calendars). 
+            Uniki manages your <strong>context</strong>.
+        </p>
 
-            <div class="grid md:grid-cols-3 gap-4 text-left mb-12">
-                <div class="glass-panel p-6 rounded-xl border border-white/10">
-                    <div class="mono text-green-400 text-xs mb-2">> SENSOR_FUSION</div>
-                    <h3 class="font-bold text-lg mb-1">Viterbi State Tracking</h3>
-                    <p class="text-sm text-gray-500">Probabilistic HMM filter to smooth location data and eliminate jitter.</p>
+        <p class="text-lg text-gray-600 mb-12 leading-relaxed">
+            Using passive computer vision, Uniki detects when you drift from a task—like leaving the stove on or walking away from unfinished work—and gently nudges you back. No manual entry required.
+        </p>
+
+        <form class="flex gap-3 mb-16" action="#" method="POST"> 
+            <input type="email" placeholder="Enter your email" class="bg-gray-50 border border-gray-200 rounded px-4 py-3 w-full focus:outline-none focus:border-gray-400 transition" required>
+            <button type="submit" class="bg-black text-white px-6 py-3 rounded font-medium hover:bg-gray-800 transition whitespace-nowrap">
+                Join Waitlist
+            </button>
+        </form>
+
+        <div class="border-t border-gray-100 pt-10">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-6">Technical Approach</h2>
+            
+            <div class="space-y-8">
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-1">Ego-Centric Sensor Fusion</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        We use Viterbi state tracking to infer user location and intent without the jitter of raw GPS or basic object detection.
+                    </p>
                 </div>
-                <div class="glass-panel p-6 rounded-xl border border-white/10">
-                    <div class="mono text-green-400 text-xs mb-2">> LATENT_SPACE</div>
-                    <h3 class="font-bold text-lg mb-1">Context Awareness</h3>
-                    <p class="text-sm text-gray-500">CLIP embeddings project visual data into high-dimensional semantic space.</p>
-                </div>
-                <div class="glass-panel p-6 rounded-xl border border-white/10">
-                    <div class="mono text-green-400 text-xs mb-2">> LOGIC_LAYER</div>
-                    <h3 class="font-bold text-lg mb-1">The Orchestrator</h3>
-                    <p class="text-sm text-gray-500">Deterministic logic triggers safety interventions only when needed.</p>
+                
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-1">Privacy-First Architecture</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Context is processed locally. Images are converted to vector embeddings (CLIP) on-device, preserving semantic meaning without storing video.
+                    </p>
                 </div>
             </div>
-
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="mailto:dheemanth@getuniki.com" class="px-8 py-3 bg-white text-black font-bold rounded hover:bg-gray-200 transition w-full md:w-auto">
-                    Request Early Access
-                </a>
-                <a href="#" class="px-8 py-3 border border-white/20 text-white font-bold rounded hover:bg-white/10 transition w-full md:w-auto">
-                    View Research Demo
-                </a>
-            </div>
-
         </div>
+
     </main>
 
-    <footer class="py-8 border-t border-white/10 text-center text-gray-600 text-xs mono">
-        <p>BUILT BY AUTONOMY ENGINEERS. SAN FRANCISCO.</p>
-        <p class="mt-2">© 2026 UNIKI INC.</p>
+    <footer class="py-10 text-center text-gray-400 text-sm border-t border-gray-50">
+        &copy; 2026 Uniki Inc.
     </footer>
 
 </body>
